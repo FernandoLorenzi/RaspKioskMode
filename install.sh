@@ -26,6 +26,11 @@ sudo wget -P /lib/systemd/system https://raw.githubusercontent.com/FernandoLoren
 # HABILITANDO O SCRIPT NA INICIALIZAÇÃO
 sudo systemctl enable kiosk.service
 
+#ALTERANDO O PAPEL DE PAREDE PADRÃO (em processo de validação)
+#sudo wget -P /usr/share/rpd-wallpaper/ https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/Kioskwallpaper.png
+#sudo sed -i 's/fisherman.jpg/Kioskwallpaper.png/g' /etc/xdg/pcmanfm/LXDE-pi/desktop-items-0.conf
+
+
 	echo
 	echo
 	echo
