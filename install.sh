@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script will install RASPKIOSKMODE on a fresh Raspberry Pi OS
 # This script is experimental and does not ensure any security.
-# sudo wget -O - https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/install.sh | bash
+# sudo wget -O - https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/main/install.sh | bash
 
 
 # REMOVENDO PACOTES DESNECESSÁRIOS
@@ -17,17 +17,17 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get -y install xdotool unclutter sed wget
 
 # CRIANDO O SCRIPT RESPONSÁVEL POR INICIAR O KIOSK MODE
-wget -P /home/pi https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/kiosk.sh
+wget -P /home/pi https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/main/kiosk.sh
 #chown pi:pi /home/pi/kiosk.sh
 
 # CRIANDO O SERVIÇO PARA INICIAR O SCRIPT NO BOOT
-sudo wget -P /lib/systemd/system https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/kiosk.service
+sudo wget -P /lib/systemd/system https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/main/kiosk.service
 
 # HABILITANDO O SCRIPT NA INICIALIZAÇÃO
 sudo systemctl enable kiosk.service
 
 #ALTERANDO O PAPEL DE PAREDE PADRÃO (em processo de validação)
-#sudo wget -P /usr/share/rpd-wallpaper/ https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/Kioskwallpaper.png
+#sudo wget -P /usr/share/rpd-wallpaper/ https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/main/Kioskwallpaper.png
 #sudo sed -i 's/fisherman.jpg/Kioskwallpaper.png/g' /etc/xdg/pcmanfm/LXDE-pi/desktop-items-0.conf
 
 
