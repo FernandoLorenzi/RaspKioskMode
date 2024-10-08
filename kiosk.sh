@@ -20,7 +20,7 @@ sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium
 
 # Executar o Chromium 
 
-/usr/bin/chromium-browser --noerrdialogs --disable-infobars --disable-features=TranslateUI --kiosk http://www.google.com http://www.uol.com.br &
+/usr/bin/chromium-browser --noerrdialogs --disable-infobars --disable-features=TranslateUI --kiosk https://www.google.com https://www.opmetech.com.br &
  
 
 # Alternar as abas abertas do Chromium a cada 20 segundos
