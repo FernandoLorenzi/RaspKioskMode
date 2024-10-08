@@ -15,7 +15,7 @@ Aqui vamos explanar e coletando ajuda da comunidade para que o script fique cada
 Executar em um terminal a seguinte linha de comando (requer conexão à internet):
 
 
-	$ sudo wget -qO - https://github.com/FernandoLorenzi/RaspKioskMode/install.sh | bash
+	$ sudo wget -O - https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/install.sh | bash
 
 ------------
 
