@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script will install RASPKIOSKMODE on a fresh Raspberry Pi OS
 # This script is experimental and does not ensure any security.
-# sudo wget -O - https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/install.sh | bash
+# sudo wget -O - https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/install.sh | bash
 
 
 # REMOVENDO PACOTES DESNECESSÁRIOS
@@ -17,11 +17,11 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get -y install xdotool unclutter sed wget
 
 # CRIANDO O SCRIPT RESPONSÁVEL POR INICIAR O KIOSK MODE
-wget -P /home/pi https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/kiosk.sh
+wget -P /home/pi https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/kiosk.sh
 #chown pi:pi /home/pi/kiosk.sh
 
 # CRIANDO O SERVIÇO PARA INICIAR O SCRIPT NO BOOT
-sudo wget -P /lib/systemd/system https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/kiosk.service
+sudo wget -P /lib/systemd/system https://raw.githubusercontent.com/FernandoLorenzi/RaspKioskMode/master/kiosk.service
 
 # HABILITANDO O SCRIPT NA INICIALIZAÇÃO
 sudo systemctl enable kiosk.service
